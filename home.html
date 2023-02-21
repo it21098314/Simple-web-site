@@ -6,9 +6,16 @@
     <link rel="stylesheet" type="text/css" href="home.css">
   </head>
   <body>
+    <nav>
+      <div class="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#" style="float:right" onclick="logout()">Log Out</a>
+      </div>
+    </nav>
     <h1>Welcome to the Home Page</h1>
     <p>This is where you can access all of the features of our website.</p>
-    <button onclick="logout()">Log Out</button>
     <script>
       function logout() {
         // Redirect the user to the login page
