@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <script>
+      function login() {
+        // Get the values of the username and password fields
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        
+        // You should check the username and password against a database or some other data source to validate the login
+        // For the sake of simplicity, we'll just check if the username is "user" and the password is "password"
+        if (username === "tharindu" && password === "1234") {
+          // Redirect the user to the home page after a successful login
+          window.location.href = "home.html";
+        } else {
+          alert("Invalid username or password. Please try again.");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form onsubmit="login(); return false;">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
+
